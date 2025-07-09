@@ -1,0 +1,7 @@
+# Ignore sensitive data, large files, and environment configs
+data/raw_data/
+data/processed_data/
+__pycache__/
+*.env
+*.log
+*.DS_Store

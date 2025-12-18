@@ -1,4 +1,3 @@
-cat <<EOF > README.md
 # Project Chimera Genesis: A Relational Digital Synthesis
 
 ![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -41,26 +40,27 @@ All processed data is serialized into the **Chimera Data Stream (\`.cds\`)** for
 
 ## III. Data Flow Diagram
 
+\`\`\`mermaid
 graph TD
-    subgraph "Phase 1: Input & Excavation"
-    TX["Text Data Source (story.txt / Logs)"]
+    subgraph Input_Sources
+    TX["Text Data Source (story.txt / Chat Logs)"]
     IM["Image Data Source (.jpg, .png)"]
     AU["Audio Data Source (.mp3)"]
     end
 
-    subgraph "Phase 2: ChimeraCore Engine (Python)"
+    subgraph ChimeraCore_Engine
     Scrubber["PII Scrubber & Anonymizer"]
     Parser["Log Parser & Normalizer"]
     Analyzer["Sentiment & Context Analyzer"]
     end
 
-    subgraph "Phase 3: The Chimera Stream (.cds)"
+    subgraph Chimera_Stream
     Block1["Memory Block: 2021"]
     Block2["Memory Block: 2022"]
     Block3["Memory Block: 2023"]
     end
 
-    subgraph "Phase 4: Synthesis Interface"
+    subgraph Synthesis_Interface
     LLM["Large Language Model (Context Window)"]
     Persona["Bas(AI) Entity"]
     end
@@ -77,6 +77,7 @@ graph TD
     Block2 --> LLM
     Block3 --> LLM
     LLM --> Persona
+\`\`\`
 
 ---
 

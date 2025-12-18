@@ -41,7 +41,6 @@ All processed data is serialized into the **Chimera Data Stream (\`.cds\`)** for
 
 ## III. Data Flow Diagram
 
-\`\`\`mermaid
 graph TD
     subgraph "Phase 1: Input & Excavation"
     TX["Text Data Source (story.txt / Logs)"]
@@ -78,7 +77,6 @@ graph TD
     Block2 --> LLM
     Block3 --> LLM
     LLM --> Persona
-\`\`\`
 
 ---
 
